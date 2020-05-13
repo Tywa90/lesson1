@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First JS</title>
+</head>
+<body>
+    <img src="nkmz_hov.png" alt="logo" style="position: relative; left: 40%;">
+    <div style="font-size: 40px; font-family: Arial, Helvetica, sans-serif; text-align: center;">Калькулятор форматов</div>
+
+
+    <script>
+        debugger;
+        alert("Калькулятор учета выполненной работы за месяц для составления отчета в ОДиР. Для начала работы нажмите 'ОК'");
+        var formarA4 = prompt("Введите количество выданных чертежей в формате А4",""); //просим пользователя ввести кол-во чертежей в формате А4 
+        var formarA3 = prompt("Введите количество выданных чертежей в формате А3",""); //просим пользователя ввести кол-во чертежей в формате А3
+        var formarA2 = prompt("Введите количество выданных чертежей в формате А2",""); //просим пользователя ввести кол-во чертежей в формате А2
+        var formarA1 = prompt("Введите количество выданных чертежей в формате А1",""); //просим пользователя ввести кол-во чертежей в формате А1
+
+        var convertA4 = 0.125; //коэффициент расчета выданных форматов для каждого размера бумажки
+        var convertA3 = 0.25;
+        var convertA2 = 0.5;
+        var convertA1 = 1; //вся выданная бумага подсчитывается в форматах А1.  
+
+        var resultA4 = formarA4*convertA4; //умножаем количество выданных форматов на коэффициент
+        var resultA3 = formarA3*convertA3;
+        var resultA2 = formarA2*convertA2;
+        var resultA1 = formarA1*convertA1;
+
+        var resultTotal = resultA4 + resultA3 + resultA2 + resultA1; //складываем все выданные форматы
+
+        alert("Общее количество чертежей в формате А1 = " + resultTotal)    //выводит результат работы
+    </script>
+</body>
+</html>
